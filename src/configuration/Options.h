@@ -33,6 +33,9 @@ public:
 
         // Should DNC mode be on or off
         DNC_MODE,
+        
+        // Should we check many small sub-regions
+        SUB_MODE,
 
         // Help flag
         HELP,

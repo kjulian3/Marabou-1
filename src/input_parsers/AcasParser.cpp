@@ -52,15 +52,15 @@ void AcasParser::generateQuery( InputQuery &inputQuery )
     for ( unsigned i = 1; i < numberOfLayers - 1; ++i )
         numberOfInternalNodes += _acasNeuralNetwork.getLayerSize( i );
 
-    printf( "Number of layers: %u. Input layer size: %u. Output layer size: %u. Number of ReLUs: %u\n",
-            numberOfLayers, inputLayerSize, outputLayerSize, numberOfInternalNodes );
+    //printf( "Number of layers: %u. Input layer size: %u. Output layer size: %u. Number of ReLUs: %u\n",
+    //        numberOfLayers, inputLayerSize, outputLayerSize, numberOfInternalNodes );
 
     // The total number of variables required for the encoding is computed as follows:
     //   1. Each input node appears once
     //   2. Each internal node has a B variable and an F variable
     //   3. Each output node appears once
     unsigned numberOfVariables = inputLayerSize + ( 2 * numberOfInternalNodes ) + outputLayerSize;
-    printf( "Total number of variables: %u\n", numberOfVariables );
+    //printf( "Total number of variables: %u\n", numberOfVariables );
 
     inputQuery.setNumberOfVariables( numberOfVariables );
 

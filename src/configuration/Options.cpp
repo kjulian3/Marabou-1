@@ -41,6 +41,7 @@ void Options::initializeDefaultValues()
     /*
       Bool options
     */
+    _boolOptions[SUB_MODE] = true;
     _boolOptions[DNC_MODE] = false;
     _boolOptions[PREPROCESSOR_PL_CONSTRAINTS_ADD_AUX_EQUATIONS] = false;
 
@@ -51,7 +52,7 @@ void Options::initializeDefaultValues()
     _intOptions[NUM_INITIAL_DIVIDES] = 0;
     _intOptions[NUM_ONLINE_DIVIDES] = 2;
     _intOptions[INITIAL_TIMEOUT] = 5;
-    _intOptions[VERBOSITY] = 2;
+    _intOptions[VERBOSITY] = 0;
     _intOptions[TIMEOUT] = 0;
 
     /*

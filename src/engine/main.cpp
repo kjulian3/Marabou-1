@@ -13,6 +13,7 @@
 
  **/
 
+#include "SubregionsMarabou.h"
 #include "DnCMarabou.h"
 #include "Error.h"
 #include "Marabou.h"
@@ -92,6 +93,8 @@ int main( int argc, char **argv )
 
         if ( options->getBool( Options::DNC_MODE ) )
             DnCMarabou().run();
+        else if ( options->getBool( Options::SUB_MODE ) )
+            SubregionsMarabou(options->getInt( Options::VERBOSITY ) ).run();
         else
             Marabou( options->getInt( Options::VERBOSITY ) ).run();
     }
